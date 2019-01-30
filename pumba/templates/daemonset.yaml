@@ -1,0 +1,53 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  name: {{ .Chart.Name }}
+  labels:
+    app.kubernetes.io/name: {{ .Chart.Name }}
+    helm.sh/chart: {{ include "pumba.chart" . }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    version: v1
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ .Chart.Name }}
+  template:
+    metadata:
+      labels:
+        {{- if not .Values.pumbaSelfKill }}      
+        com.gaiaadm.pumba: "true"
+        {{- end }}
+        app.kubernetes.io/name: {{ .Chart.Name }}
+        helm.sh/chart: {{ include "pumba.chart" . }}
+        app.kubernetes.io/managed-by: {{ .Release.Service }}
+        version: v1
+    spec:
+      {{- if .Values.affinity }}
+      affinity:
+{{ toYaml .Values.affinity | trimSuffix "\n" | indent 8 }}
+      {{- end }}
+      {{- if .Values.tolerations }}
+      tolerations:
+{{ toYaml .Values.tolerations | trimSuffix "\n" | indent 8 }}
+      {{- end }}
+      containers:
+      - name: {{ .Chart.Name }}
+        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        args: 
+    {{- range .Values.pumba.args }}
+          - {{ . | quote }}
+    {{- end }}
+        resources:
+{{ toYaml .Values.resources | indent 10 }}                
+        volumeMounts:
+        - name: dockersocket
+          mountPath: /var/run/docker.sock
+{{- if .Values.nodeSelector }}          
+      nodeSelector:
+{{ toYaml .Values.nodeSelector | trimSuffix "\n" | indent 10 }}
+      {{- end }}
+      volumes:
+        - hostPath:
+            path: /var/run/docker.sock
+          name: dockersocket

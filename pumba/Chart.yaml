@@ -1,0 +1,7 @@
+name: pumba
+version: 0.1.1
+description: Pumba chaos engineering tool
+home: https://github.com/alexei-led/pumba
+maintainers:
+- name: Shantanu Deshpande
+  email: shantanud106@gmail.com

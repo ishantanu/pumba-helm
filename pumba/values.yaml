@@ -1,0 +1,27 @@
+# Default values for pumba.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+image:
+  repository: gaiaadm/pumba
+  tag: master
+  pullPolicy: Always
+
+pumbaSelfKill: false
+
+nodeSelector: {node-type: node}
+
+tolerations: []
+
+affinity: {}
+
+resources: 
+  requests:
+    cpu: 10m
+    memory: 5Mi
+  limits:
+    cpu: 100m
+    memory: 20M
+  
+pumba:
+  args: [--random, --interval, "3m", kill, --signal, "SIGKILL"]     
