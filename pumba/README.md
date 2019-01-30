@@ -9,7 +9,7 @@
 By default this chart will initiate the chaos by deploying [Pumba](https://github.com/alexei-led/pumba) CE tool.
 
 The following table lists common configurable parameters of the chart and
-their default values. See values.yaml for all available options.
+their default values. See [values.yaml](https://github.com/iamShantanu101/pumba-helm/blob/master/pumba/values.yaml) for all available options.
 
 |       Parameter                        |           Description                       |                         Default                     |
 |----------------------------------------|---------------------------------------------|-----------------------------------------------------|
