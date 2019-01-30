@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-* Kubernetes with extensions/v1beta1 available
+* Kubernetes with `extensions/v1beta1` available
 
 ## Configuration
 
