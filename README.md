@@ -1,6 +1,6 @@
 # Pumba Helm Chart
 
-This repository contains the **Pumba Helm Chart** to deploy [Pumba](https://github.com/alexei-led/pumba) to [Kubernetes](https://kubernetes.io/)
+This repository contains the **Pumba Helm Chart** for deploying [Pumba](https://github.com/alexei-led/pumba) to [Kubernetes](https://kubernetes.io/)
 
 ## Install Helm
 
