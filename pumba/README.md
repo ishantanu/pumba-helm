@@ -28,13 +28,21 @@ Specify each parameter using the `--set key=value[,key=value]` argument to
 
 ## Installation
 
-```shell
-helm repo add pumba-helm https://github.com/iamShantanu101/pumba-helm   
-helm install pumba-helm/pumba \
+1. Clone the repository:
+
+   ```shell
+   git clone https://github.com/iamShantanu101/pumba-helm
+   ```
+
+2. Modify the values in `values.yaml` as per your needs.
+
+3. Initiate chaos with Pumba by running:
+   ```shell
+   helm install ./pumba \
       --name pumba \
       --namespace pumba \
-      --values=values.yaml
-```
+      --values=./pumba/values.yaml
+   ```
 
 ## Uninstall
 

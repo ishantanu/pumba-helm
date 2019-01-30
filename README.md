@@ -6,21 +6,22 @@ This repository contains the **Pumba Helm Chart** to deploy [Pumba](https://gith
 
 Get the latest [Helm release](https://github.com/kubernetes/helm#install).
 
-## Install Charts
+## Install Chart
 
-1. Add this Chart repo to Helm:
+1. Clone the repository:
 
    ```console
-   helm repo add pumba-helm https://github.com/iamShantanu101/pumba-helm
+   git clone https://github.com/iamShantanu101/pumba-helm
    ```
 
-2. Copy the `values.yaml` file from the repo and modify it as per your needs.
+2. Modify the values in `values.yaml` as per your needs.
+
 3. Initiate chaos with Pumba by running:
    ```console
-   helm install pumba-helm/pumba \
+   helm install ./pumba \
       --name pumba \
       --namespace pumba \
-      --values=values.yaml
+      --values=./pumba/values.yaml
    ```
 
 For more detailed instructions, see the chart's documentation [here](https://github.com/iamShantanu101/pumba-helm/blob/master/pumba/README.md).
