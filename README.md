@@ -23,8 +23,13 @@ Get the latest [Helm release](https://github.com/kubernetes/helm#install).
       --values=values.yaml
    ```
 
-For more detailed instructions, see the chart's documentation [here](https://github.com/iamShantanu101/pumba-helm/blob/master/pumba-helm/README.md).
+For more detailed instructions, see the chart's documentation [here](https://github.com/iamShantanu101/pumba-helm/blob/master/pumba/README.md).
 
 ## Reporting Issues
 
 Please report all issues via github issues [here](https://github.com/iamShantanu101/pumba-helm/issues).
+
+## Credits
+
+Big thanks to [Pumba](https://github.com/alexei-led/pumba) (@alexei-led) for creating Pumba.
+
