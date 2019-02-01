@@ -11,7 +11,7 @@ Get the latest [Helm release](https://github.com/kubernetes/helm#install).
 1. Clone the repository:
 
    ```console
-   git clone https://github.com/iamShantanu101/pumba-helm
+   git clone https://github.com/ishantanu/pumba-helm
    ```
 
 2. Modify the values in `values.yaml` as per your needs.
@@ -24,11 +24,11 @@ Get the latest [Helm release](https://github.com/kubernetes/helm#install).
       --values=./pumba/values.yaml
    ```
 
-For more detailed instructions, see the chart's documentation [here](https://github.com/iamShantanu101/pumba-helm/blob/master/pumba/README.md).
+For more detailed instructions, see the chart's documentation [here](https://github.com/ishantanu/pumba-helm/blob/master/pumba/README.md).
 
 ## Reporting Issues
 
-Please report all issues via github issues [here](https://github.com/iamShantanu101/pumba-helm/issues).
+Please report all issues via github issues [here](https://github.com/ishantanu/pumba-helm/issues).
 
 ## Credits
 
